@@ -1,7 +1,15 @@
+//TODO: convert this to a class instead?
+
+class Identicon {
+  constructor(value) {
+    console.log(value);
+  }
+}
+
 const identicon = (() => {
   const addFill = cell => {
     document.querySelector(`span[data-index="${cell.index}"]`).className =
-      'fill';
+      "fill";
   };
 
   const removeEvens = cell => cell.value % 2 === 1;
@@ -22,7 +30,7 @@ const identicon = (() => {
 
   const setColor = ([r, g, b]) => {
     document.documentElement.style.setProperty(
-      '--fill-color',
+      "--fill-color",
       `rgb(${r}, ${g}, ${b})`
     );
   };
