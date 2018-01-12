@@ -1,3 +1,12 @@
+html {
+  background: linear-gradient(200deg, red, violet);
+  background-size: 600% 600%;
+  background-attachment: fixed;
+  height: 100%;
+  min-height: 100%;
+  animation: TackyGradient 12s ease infinite;
+}
+
 .main {
   margin: 25px auto;
   padding: 20px;
@@ -31,7 +40,7 @@
   background-color: rgb(230, 240, 250);
 }
 
-input[type='text'] {
+input[type="text"] {
   padding: 10px 20px;
   border-radius: 5px 0px 0px 5px;
   border: 1px solid rgb(220, 225, 230);
@@ -57,4 +66,17 @@ input:focus {
 
 .fill {
   background-color: var(--fill-color);
+}
+
+/* animated gradient found here: https://www.gradient-animator.com */
+@keyframes TackyGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
