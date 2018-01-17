@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const value = input.value;
     input.value = "";
     const setColor = "blue";
-    new Identicon(value);
+    // new Identicon(value);
     identicon(value);
   });
 });
