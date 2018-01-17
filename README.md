@@ -9,8 +9,7 @@ We are going to be building out an Identicon generator using JavaScript and some
 From [Wikipedia](https://en.wikipedia.org/wiki/Identicon): An Identicon is a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users' privacy
 
 The completed application looks like this:
-
-<!-- TODO: functionality demo -->
+![gif of the finished product](identicon-demo.gif)
 
 ---
 
