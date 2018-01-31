@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", event => {
     input.value = "";
     const setColor = "blue";
     identicon(value);
-    Identicon.renderIdenticon(value);
+    // Identicon.renderIdenticon(value);
   });
 });

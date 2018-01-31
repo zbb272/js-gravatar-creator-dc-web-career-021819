@@ -68,7 +68,6 @@ input:focus {
   background-color: var(--fill-color);
 }
 
-/* animated gradient found here: https://www.gradient-animator.com */
 @keyframes TackyGradient {
   0% {
     background-position: 0% 50%;
