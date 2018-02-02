@@ -1,10 +1,11 @@
 const identicon = (() => {
+
   const addFill = cell => {
     document.querySelector(`span[data-index="${cell.index}"]`).className =
       "fill";
   };
 
-  const removeEvens = cell => cell.value % 2 === 1;
+  const removeEvens = (cell) => cell.value % 2 === 1;
 
   const withIndex = (value, index) => ({ index, value });
 

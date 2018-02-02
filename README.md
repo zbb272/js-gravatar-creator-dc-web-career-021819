@@ -1,5 +1,15 @@
 ## Welcome to _IDENTICON™️_ AKA _GRAVATAR™️_
 
+TODO MAKE SECTIONS
+ - [ ] what is identicon
+ - [ ] what skills are we training
+ - [ ] deliverables
+ - [ ] how to get started
+ - [ ] make other solution OO
+ - [ ] clean functional solution
+ - [ ] ensure alex's is as was given not sure if i poked
+ - [ ] standardize HTML
+
 ---
 
 We are going to be building out an Identicon generator using JavaScript and some DOM manipulation.

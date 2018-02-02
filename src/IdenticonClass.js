@@ -1,49 +1,52 @@
 class Identicon {
-  static renderIdenticon(value) {
-    const hex = md5.array(value);
-    this.setColor(hex);
 
-    this.chunk(hex, 3)
-      .map(this.mirrorRow)
-      .reduce(this.flatten)
-      .map(this.withIndex)
-      .filter(this.removeEvens)
-      .forEach(this.addFill);
+  constructor(userString, size=5, color='#eee') {
+    this.size = size
+    this.hashArr = this._generateHashArr(userString)
+    this.RGBArr = this._generateIdenticonRGB()
+    this.color = this._formatRGBStyle(this.RGBArr)
+    this.blankMatrix = Identicon.getDefaultMatrix(size, size)
+    this.matrix = this._generateValueMatrix()
   }
 
-  static setColor([r, g, b]) {
-    document.documentElement.style.setProperty(
-      "--fill-color",
-      `rgb(${r}, ${g}, ${b})`
-    );
+  static getDefaultMatrix(rows, cols) {
+    // almost sure you can't use list initialization for the second fill value of blank arrays because it copies the reference for the same array to all the values which is just CRAZY don't even get me STARTED!
+    return new Array(rows).fill().map(row => Array(cols).fill(1))
   }
 
-  static chunk(arr, size) {
-    if (arr.length <= size) {
-      return arr.length === size ? [arr] : [];
-    } else {
-      return [arr.slice(0, size), ...this.chunk(arr.slice(size), size)];
-    }
+  _generateHashArr(str) {
+    return md5.array(str).slice(0, 15) // cutting off the last one because we want our array divisible by 3 and we are only using 15 blocks
   }
 
-  static mirrorRow([a, b, c]) {
-    return [a, b, c, b, a];
+  _generateIdenticonRGB() {
+    // what would be really fun to ensure vibrant unique colors:
+    // dominantColorCount = random choice [1, 2]
+    // 15/3 === 5, so we grab the highest value out of two of the sections and a low/medium value out of the remaining section
+    // use that for RGB (select which sections we derive the high values from by whichever have the highest 1 or 2 so the hashing nature remains true)
+    // the sections we chose order lines up to the RGB order.
+    // but need to work on other stuff not fun fun so this:
+    return this.hashArr.slice(0, 3)
   }
 
-  static flatten(acc, curr) {
-    return [...acc, ...curr];
+  _formatRGBStyle([r, g, b]) {
+    return `rgb(${r}, ${g}, ${b})`
   }
 
-  static withIndex(value, index) {
-    return { index, value };
+  _getDefaultMatrix(rows, cols) {
+    // almost sure you can't use list initialization for the second fill value of blank arrays because it copies the reference for the same array to all the values which is just CRAZY don't even get me STARTED!
+    return new Array(rows).fill().map(row => Array(cols).fill(1))
   }
 
-  static removeEvens(obj) {
-    return obj.value % 2 === 1;
+  _generateValueMatrix() {
+    const matrix = Identicon.getDefaultMatrix(this.size, this.size)
+    this.hashArr.forEach((currInt, idx) => {
+      const rowIdx = Math.floor(idx / 3)
+      const colIdx = idx % 3
+      const value = currInt % 2 ? true : false
+      matrix[rowIdx][colIdx] = value
+      matrix[rowIdx][4 - colIdx] = value
+    })
+    return matrix
   }
 
-  static addFill(cell) {
-    document.querySelector(`span[data-index="${cell.index}"]`).className =
-      "fill";
-  }
 }

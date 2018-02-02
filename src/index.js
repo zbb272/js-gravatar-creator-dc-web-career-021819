@@ -1,15 +1,16 @@
-document.addEventListener("DOMContentLoaded", event => {
-  const form = document.getElementById("identicon-form");
-  form.addEventListener("submit", ev => {
-    ev.preventDefault();
+function handleSubmit(e) {
+  e.preventDefault()
 
-    document.querySelectorAll(".fill").forEach(span => (span.className = ""));
+  const inputValue = e.target.querySelector("input").value
+  const identicon = new Identicon(inputValue)
 
-    const input = ev.target.querySelector("input");
-    const value = input.value;
-    input.value = "";
-    const setColor = "blue";
-    identicon(value);
-    // Identicon.renderIdenticon(value);
-  });
-});
+  mapMatrixToDOM(identicon.blankMatrix)
+  updateDOM(identicon)
+
+  e.target.reset()
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("identicon-form")
+  form.addEventListener("submit", handleSubmit)
+})
