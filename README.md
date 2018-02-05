@@ -33,7 +33,7 @@ The completed application should look and function like this:
 
 ![gif of the finished product](assets/identicon-demo.gif)
 
-- ##### User Experience:
+- #### User Experience:
  - When a user inputs their name, the Identicon should dynamically produce an
 avatar for them
  - When given a blank string, a blank pattern should be rendered to the DOM
@@ -41,7 +41,7 @@ avatar for them
  as many times as they like without refreshing the application
  - A single input value should always produce the same image
 
-- ##### Program Architecture:
+- #### Program Architecture:
  - Our program's functionality should be appropriately divided amongst the
  separate files provided
  - Our code follows the MVC pattern, where the Identicon class is entirely
