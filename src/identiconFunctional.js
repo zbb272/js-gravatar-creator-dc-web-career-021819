@@ -1,3 +1,5 @@
+// credit: alex griffith
+
 const identicon = (() => {
 
   const addFill = cell => {

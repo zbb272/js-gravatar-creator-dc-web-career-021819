@@ -1,12 +1,7 @@
 function handleSubmit(e) {
   e.preventDefault()
-
   const inputValue = e.target.querySelector("input").value
-  const identicon = new Identicon(inputValue)
-
-  mapMatrixToDOM(identicon.blankMatrix)
-  updateDOM(identicon)
-
+  updateDOM(inputValue)
   e.target.reset()
 }
 
