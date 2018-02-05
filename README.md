@@ -67,13 +67,16 @@ parts of code that need to work together:
   // i.e. [243, 8, 144, ...]
   ```
   - Use these values to both derive the color of the blocks, as well as what
-  what squares should have blocks  
+  what squares in the DOM should have blocks
 
 
 - Our ```index.html``` has everything we need as far as references to Identicon
-squares goes: node IDs are designated ```"row_index-column_index"``` of the 5x5
-Identicon matrix
-
+squares on the DOM
+- Node IDs are designated ```"row_index-column_index"```, mapping to the
+5x5 Identicon DOM grid
+- Remember: our 'source of truth' regarding color and block positions should
+exist in the Identicon model (instance), which the DOM is solely a reflection
+of!
 - If you are having trouble getting started, structure a development action
 plan and present it to your instructors
 
