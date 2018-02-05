@@ -17,7 +17,7 @@ username string).
 GitHub automatically generates one for every user before they have uploaded a
 profile photo. They tend to look like this!:  
 <p align="center">
-  <img src="assets/identicon-example.png"/>
+  <img src="https://s3.amazonaws.com/learn-verified/identicon-example.png"/>
 </p>
 
 ### Learning Objectives
@@ -31,7 +31,7 @@ profile photo. They tend to look like this!:
 
 The completed application should look and function like this:
 
-![gif of the finished product](assets/identicon-demo.gif)
+![gif of the finished product](https://s3.amazonaws.com/learn-verified/identicon-demo.gif)
 
 ##### User Experience:
  - When a user inputs their name, the Identicon should dynamically produce an
