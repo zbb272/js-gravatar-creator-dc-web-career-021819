@@ -73,7 +73,14 @@ parts of code that need to work together:
 - Our ```index.html``` has everything we need as far as references to Identicon
 squares on the DOM
 - Node IDs are designated ```"row_index-column_index"```, mapping to the
-5x5 Identicon DOM grid
+5x5 Identicon DOM grid. If we wanted to change the color of the top
+right block in our DOM's Identicon grid, we could do it like this:
+```javascript
+const rowIdx = 0 // top row
+const columnIdx = 4 // fifth block
+const blockColor = "rgb(16, 244, 68)"
+document.getElementById(`${rowIdx}-${colIdx}`).style.backgroundColor = blockColor
+```
 - Remember: our 'source of truth' regarding color and block positions should
 exist in the Identicon model (instance), which the DOM is solely a reflection
 of!
