@@ -21,9 +21,9 @@ profile photo. They tend to look like this!:
 </p>
 
 ### Learning Objectives
+This lab is specifically set up to improve your ability to independently break down a larger problem in to smaller, achievable tasks, so it is up to you to figure out a good approach to tackle this challenge.  You have been given an end goal, a working Identicon generator.  Your objectives are to:
 
- - Given an end goal, (a working Identicon generator), identify the steps
- required to get there
+ - Identify the intermediate steps required to build out a fully functional app
  - Practice syncing JavaScript functionality with the DOM
  - Practice practical implementations of object-oriented solutions
 
