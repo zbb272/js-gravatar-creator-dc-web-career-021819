@@ -22,7 +22,7 @@ profile photo. They tend to look like this!:
 
 ### Learning Objectives
 This lab is specifically set up to improve your ability to independently break
-down a larger problem in to smaller, achievable tasks. It is up to you to
+down a larger problem into smaller, achievable tasks. It is up to you to
 figure out a good approach to tackle this challenge.  You have been given an end
 goal: a working Identicon generator.  Your objectives are to:
  - Given an end goal, (a working Identicon generator), identify the steps
