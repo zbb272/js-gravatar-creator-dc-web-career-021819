@@ -49,7 +49,6 @@ avatar for them
  update the DOM
 
 ### Getting Started
-
  - When approaching a problem like this, take a moment to map out the distinct
 parts of code that need to work together:
    - At what points does our JavaScript interact with the DOM?
@@ -57,18 +56,31 @@ parts of code that need to work together:
    should an Identicon instance have?
    - When do we capture user input and where do we send it?
 
-- An external library ```md5``` has been provided and is already being imported
- in our HTML
-  - Use the ```md5.array``` method to generate a unique set of values from the
-  user's input value:
-  ```JavaScript
-  const hashedArr = md5.array(strValue)
-  // hashedArr == an array of 16 values 0 - 255 (inclusive)
-  // i.e. [243, 8, 144, ...]
-  ```
-  - Use these values to both derive the color of the blocks, as well as what
-  what squares in the DOM should have blocks
+##### Generating Identicon Values
+An external library ```md5``` has been provided and is already being imported
+in our HTML. Use the ```md5.array``` method to generate a unique set of integers from the
+user's input value:
+```JavaScript
+const hashedArr = md5.array(strValue)
+// hashedArr == an array of 16 integers, 0 - 255 (inclusive)
+// i.e. [243, 8, 144, ...]
+```
+We can use these values to derive both our color as well as our block
+positions. For color, the bounds of 0 - 255 are very convenient! We could, for
+example, always use the first three values of the hash array and map them to an
+[rgb value](https://www.w3schools.com/colors/colors_rgb.asp).
 
+To derive which squares belong where, we have to be a little more clever.
+In examining the Identicon example, we see a total of 25 squares making up the
+image. Upon further inspection, we see that the graphics are mirror images. This
+leaves us with only 15 unique squares (the rest are mirrored). Using 15 values
+from our 16 item hashed array should work if we map them to positions in the
+graphic.
+
+The final step is to determine _how_ a value determines whether a square should
+be present or not. For simplicity's sake, let's use an odd/even check on the
+values (essentially making them boolean) and use that to determine whether a
+square should be present or not.
 
 - Our ```index.html``` has everything we need as far as references to Identicon
 squares on the DOM
