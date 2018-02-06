@@ -11,8 +11,8 @@ An Identicon is a visual representation of a hash value that serves to identify
 a user of a computer system as a form of avatar while protecting the user's
 privacy. You can read more about [Identicons here](https://en.wikipedia.org/wiki/Identicon).
 
-Put simply, an Identicon is an image that corresponds to, and is derived from, a unique value, (i.e. a
-username string).
+Put simply, an Identicon is an image that corresponds to, and is derived from, a
+unique value, (i.e. a username string).
 
 GitHub automatically generates one for every user before they have uploaded a
 profile photo. They tend to look like this!:  
@@ -58,8 +58,8 @@ parts of code that need to work together:
 
 ##### Generating Identicon Values
 An external library ```md5``` has been provided and is already being imported
-in our HTML. Use the ```md5.array``` method to generate a unique set of integers from the
-user's input value:
+in our HTML. Use the ```md5.array``` method to generate a unique set of integers
+from the user's input value:
 ```JavaScript
 const hashedArr = md5.array(strValue)
 // hashedArr == an array of 16 integers, 0 - 255 (inclusive)
