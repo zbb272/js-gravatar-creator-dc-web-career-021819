@@ -101,10 +101,10 @@ document.getElementById(`${rowIdx}-${colIdx}`).style.backgroundColor = blockColo
 exist in the Identicon model (instance), which the DOM is solely a reflection
 of!
 - If you are having trouble getting started, try chipping away at the problem
-using what you know from setting up JavaScript driven websites from scratch.
+using what you know from setting up JavaScript driven websites from scratch
 - If you are stuck and cannot see a clear solution, connect with an instructor,
 show them what you have been able to do and provide a rough plan of what you
-think needs to be done.
+think needs to be done
 
 
 Good luck!
