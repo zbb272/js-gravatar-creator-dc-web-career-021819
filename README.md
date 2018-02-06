@@ -9,8 +9,8 @@ An Identicon is a visual representation of a hash value that serves to identify
 a user of a computer system as a form of avatar while protecting the user's
 privacy. You can read more about [Identicons here](https://en.wikipedia.org/wiki/Identicon).
 
-Put simply, an Identicon is an image that corresponds to, and is derived from, a unique value, (i.e. a
-username string).
+Put simply, an Identicon is an image that corresponds to, and is derived from,
+a unique value, (i.e. a username string).
 
 GitHub automatically generates one for every user before they have uploaded a
 profile photo. They tend to look like this!:
@@ -21,7 +21,10 @@ profile photo. They tend to look like this!:
 
 ### Learning Objectives
 
-This lab is specifically set up to improve your ability to independently break down a larger problem into smaller, achievable tasks, so it is up to you to figure out a good approach to tackle this challenge. You have been given an end goal, a working Identicon generator. Your objectives are to:
+This lab is specifically set up to improve your ability to independently break
+down a larger problem into smaller, achievable tasks, so it is up to you to
+figure out a good approach to tackle this challenge. You have been given an end
+goal, a working Identicon generator. Your objectives are to:
 
 * Identify the intermediate steps required to build out a fully functional app
 * Practice syncing JavaScript functionality with the DOM
@@ -52,7 +55,9 @@ The completed application should look and function like this:
 
 ### Getting Started
 
-* Review the JavaScript files provided in `/src/`. When approaching a problem like this, take a moment to map out the distinct parts of code that need to work together:
+* Review the JavaScript files provided in `/src/`. When approaching a problem
+like this, take a moment to map out the distinct parts of code that need to work
+together:
 
   * At what points does our JavaScript interact with the DOM?
   * What methods will our Identicon class have? What information/functionality
