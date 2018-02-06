@@ -21,7 +21,10 @@ profile photo. They tend to look like this!:
 </p>
 
 ### Learning Objectives
-
+This lab is specifically set up to improve your ability to independently break
+down a larger problem in to smaller, achievable tasks. It is up to you to
+figure out a good approach to tackle this challenge.  You have been given an end
+goal: a working Identicon generator.  Your objectives are to:
  - Given an end goal, (a working Identicon generator), identify the steps
  required to get there
  - Practice syncing JavaScript functionality with the DOM
@@ -49,8 +52,9 @@ avatar for them
  update the DOM
 
 ### Getting Started
- - When approaching a problem like this, take a moment to map out the distinct
-parts of code that need to work together:
+ - Review the JavaScript files provided in ```/src/```. When approaching a
+ problem like this, take a moment to map out the distinct parts of code that
+ need to work together:
    - At what points does our JavaScript interact with the DOM?
    - What methods will our Identicon class have? What information/functionality
    should an Identicon instance have?
@@ -96,8 +100,11 @@ document.getElementById(`${rowIdx}-${colIdx}`).style.backgroundColor = blockColo
 - Remember: our 'source of truth' regarding color and block positions should
 exist in the Identicon model (instance), which the DOM is solely a reflection
 of!
-- If you are having trouble getting started, structure a development action
-plan and present it to your instructors
+- If you are having trouble getting started, try chipping away at the problem
+using what you know from setting up JavaScript driven websites from scratch
+- If you are stuck and cannot see a clear solution, connect with an instructor,
+show them what you have been able to do and provide a rough plan of what you
+think needs to be done
 
 
 Good luck!
