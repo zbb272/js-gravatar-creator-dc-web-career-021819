@@ -74,7 +74,9 @@ example, always use the first three values of the hash array and map them to an
 To derive which squares belong where, we have to be a little more clever.
 In examining the Identicon example, we see a total of 25 squares making up the
 image. Upon further inspection, we see that the graphics are mirror images. This
-leaves us with only 15 unique squares (the rest are mirrored). Using 15 of the 16 values from our hashed array should allow us to map them to positions in the graphic.
+leaves us with only 15 unique squares (the rest are mirrored). Using 15 of the 
+16 values from our hashed array should allow us to map them to positions in the 
+graphic.
 
 The final step is to determine _how_ a value determines whether a square should
 be present or not. For simplicity's sake, let's use an odd/even check on the
@@ -94,12 +96,12 @@ document.getElementById(`${rowIdx}-${colIdx}`).style.backgroundColor = blockColo
 ```
 - Remember: our 'source of truth' regarding color and block positions should
 exist in the Identicon model (instance), which the DOM is solely a reflection
-of! The DOM is not where your data is stored, just where it's displayed.
+of! The DOM is not where your data is stored, just where it's displayed
 - If you are having trouble getting started, try chipping away at the problem
 using what you know from setting up JavaScript driven websites from scratch.
 - If you are stuck and cannot see a clear solution, connect with an instructor,
 show them what you have been able to do and provide a rough plan of what you
-think needs to be done.
+think needs to be done
 
 
 Good luck!
